@@ -1,0 +1,27 @@
+<p>update works!</p>
+
+<div>
+    <h1>Record Details!!!</h1>
+<table border = "5">
+   <tr>
+   <th>ID:</th>
+   <th>NAME:</th>
+   <th>ADDRESS:</th>
+   <th>USERNAME:</th>
+   <th>PASSWORD:</th>
+   <th>EDIT:</th>
+   <th>DELETE:</th>
+   </tr>
+    <tr *ngFor = 'let e of employees'>
+   <td>{{e.empid}}</td>
+   <td>{{e.name}}</td>
+   <td>{{e.address}}</td>
+   <td>{{e.uname}}</td>
+   <td>{{e.pass}}</td>
+       <td><input type ="button" value="Edit" (click)="editData(e.empid)"></td>
+       <td><input type ="button" value="Delete" (click)="delData(e.empid)"></td>
+    </tr>
+</table>
+
+
+</div>
